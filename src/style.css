@@ -51,25 +51,94 @@ h6 {
     isolation: isolate;
 }
 
+@font-face {
+    font-family: 'Junge';
+    src: url('./fonts/Junge-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-ExtraLight.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color-bgnd-dark: #19181d;
+    --color-bgnd-mid: #242329;
+    --color-txt-white: white;
+    --color-txt-light: #cecece;
+
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-2xl: 3rem;
+}
+
+h1,
+h2 {
+    font-family: 'Junge';
+}
+
+body {
+    font-family: 'Outfit';
+    background-color: var(--color-bgnd-dark);
+    color: var(--color-txt-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.muted {
+    color: var(--color-txt-light);
+}
+
+#content {
+    max-width: 70rem;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content h2 {
+    padding: 6rem 0;
+    font-size: var(--font-2xl);
+    text-transform: lowercase;
+}
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    row-gap: 2.5rem;
+    column-gap: 6rem;
 }
 
 .menu-item {
     display: flex;
     height: 20rem;
+    background-color: var(--color-bgnd-mid);
+    text-transform: lowercase;
 }
 
 .menu-item-content {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    margin-top: 10rem;
-    padding: 1rem;
+    margin-top: 7rem;
+    padding: 1.5rem;
+    font-size: var(--font-lg);
+    line-height: normal;
 
     & > :last-child {
         margin-top: auto;
-        font-size: larger;
+        font-size: var(--font-xl);
+    }
+
+    & > h3 {
+        font-size: var(--font-xl);
+        line-height: 2.5rem;
     }
 }

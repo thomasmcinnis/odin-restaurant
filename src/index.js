@@ -1,9 +1,14 @@
 import './style.css';
-import getMenu from './menuPage';
+import getMenu from 'Components/menu/menuPage';
 
 // where we selectively render content
 const content = document.getElementById('content');
 
-const menu = getMenu();
+const view = getMenu();
+const viewName = 'Menu';
 
-content.appendChild(menu);
+const sectionHeader = document.createElement('h2');
+sectionHeader.textContent = viewName;
+
+content.appendChild(sectionHeader);
+content.appendChild(view);

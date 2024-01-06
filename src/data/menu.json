@@ -19,7 +19,7 @@
     },
     {
         "name": "Rice Paper Rolls",
-        "description": "Fresh vegetable mixture in delicate rice roll",
+        "description": "Fresh vegetable mixture in rice roll",
         "price": 4.60,
         "image": "rice-roll.jpg"
     },
@@ -31,7 +31,7 @@
     },
     {
         "name": "Pork Bao",
-        "description": "Steamed bun with melt-in-your-mouth pork",
+        "description": "Steamed bun with juicy pork belly",
         "price": 5.50,
         "image": "pork-bao.jpg"
     }
