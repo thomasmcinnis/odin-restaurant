@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Pho Bo",
+        "description": "Soup with veal and rice noodles",
+        "price": 7.50,
+        "image": "pho-bo.jpg"
+    },
+    {
+        "name": "Tom Yam",
+        "description": "Thai seafood soup",
+        "price": 9.20,
+        "image": "tom-yam.jpg"
+    },
+    {
+        "name": "Tom Kha",
+        "description": "Spicy and sour soup with cocounut milk",
+        "price": 5.60,
+        "image": "tom-kha.jpg"
+    },
+    {
+        "name": "Rice Paper Rolls",
+        "description": "Fresh vegetable mixture in delicate rice roll",
+        "price": 4.60,
+        "image": "rice-roll.jpg"
+    },
+    {
+        "name": "Nigiri Selection",
+        "description": "Selection of salmon nigiri and rolls",
+        "price": 12.50,
+        "image": "nigiri.jpg"
+    },
+    {
+        "name": "Pork Bao",
+        "description": "Steamed bun with melt-in-your-mouth pork",
+        "price": 5.50,
+        "image": "pork-bao.jpg"
+    }
+]

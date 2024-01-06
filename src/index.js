@@ -1,13 +1,9 @@
 import './style.css';
+import getMenu from './menuPage';
 
-function component() {
-    const element = document.createElement('div');
+// where we selectively render content
+const content = document.getElementById('content');
 
-    // Lodash, now imported by this script
-    element.innerHTML = 'Hello, World! what is happening';
-    element.classList.add('hello');
+const menu = getMenu();
 
-    return element;
-}
-
-document.body.appendChild(component());
+content.appendChild(menu);
