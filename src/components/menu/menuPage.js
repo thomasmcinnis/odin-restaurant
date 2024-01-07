@@ -1,6 +1,14 @@
 import data from 'Data/menu.json';
 
 export default function getMenu() {
+    const viewName = 'Menu';
+
+    const container = document.createElement('section')
+
+    const sectionHeader = document.createElement('h2');
+    sectionHeader.classList.add('center');
+    sectionHeader.textContent = viewName;
+
     const menuGrid = document.createElement('div');
     menuGrid.classList.add('menu-grid');
 
@@ -30,5 +38,8 @@ export default function getMenu() {
         menuGrid.appendChild(menuItem);
     });
 
-    return menuGrid;
+    container.appendChild(sectionHeader);
+    container.appendChild(menuGrid);
+
+    return container;
 }

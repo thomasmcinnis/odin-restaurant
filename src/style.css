@@ -92,6 +92,10 @@ body {
     flex-direction: column;
 }
 
+.center {
+    text-align: center;
+}
+
 .muted {
     color: var(--color-txt-light);
 }
@@ -99,15 +103,33 @@ body {
 #content {
     max-width: 70rem;
     place-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 6rem 0;
 }
 
 #content h2 {
-    padding: 6rem 0;
+    margin-bottom: 4rem;
     font-size: var(--font-2xl);
     text-transform: lowercase;
+}
+
+.hero-section {
+    margin-top: 5vh;
+    position: relative;
+
+    & h1 {
+        width: 100%;
+        font-size: 18rem;
+        line-height: 28rem;
+        text-align: right;
+        text-transform: lowercase;
+        z-index: 10;
+        position: absolute;
+        right: -10%;
+    }
+
+    & img {
+        padding-left: 12rem;
+    }
 }
 
 .menu-grid {
