@@ -1,0 +1,119 @@
+[
+    {
+        "venueName": "Asiatic",
+        "menu": [
+            {
+                "name": "Pho Bo",
+                "description": "Soup with veal and rice noodles",
+                "price": 7.50,
+                "image": "pho-bo.jpg"
+            },
+            {
+                "name": "Tom Yam",
+                "description": "Thai seafood soup",
+                "price": 9.20,
+                "image": "tom-yam.jpg"
+            },
+            {
+                "name": "Tom Kha",
+                "description": "Spicy and sour soup with cocounut milk",
+                "price": 5.60,
+                "image": "tom-kha.jpg"
+            },
+            {
+                "name": "Rice Paper Rolls",
+                "description": "Fresh vegetable mixture in rice roll",
+                "price": 4.60,
+                "image": "rice-roll.jpg"
+            },
+            {
+                "name": "Nigiri Selection",
+                "description": "Selection of salmon nigiri and rolls",
+                "price": 12.50,
+                "image": "nigiri.jpg"
+            },
+            {
+                "name": "Pork Bao",
+                "description": "Steamed bun with juicy pork belly",
+                "price": 5.50,
+                "image": "pork-bao.jpg"
+            }
+        ]
+    },
+    {
+        "venueName": "Burgari",
+        "menu": [
+            {
+                "name": "Classic Burger",
+                "description": "American classic with a juicy beef patty",
+                "price": 8.00,
+                "image": "classic-burger.jpg"
+            },
+            {
+                "name": "Sweet Potato Fries",
+                "description": "Crispy baked sweet potatoes",
+                "price": 4.00,
+                "image": "sweet-potato-fries.jpg"
+            },
+            {
+                "name": "Fried Chicken",
+                "description": "Golden crispy fried chicken",
+                "price": 7.50,
+                "image": "fried-chicken.jpg"
+            },
+            {
+                "name": "BBQ Ribs",
+                "description": "Tender ribs in a smoky BBQ sauce",
+                "price": 12.00,
+                "image": "bbq-ribs.jpg"
+            },
+            {
+                "name": "Milkshake",
+                "description": "Decadant chocoloate milkshake",
+                "price": 5.50,
+                "image": "milkshake.jpg"
+            }
+        ]
+    },
+    {
+        "venueName": "Mesino",
+        "menu": [
+            {
+                "name": "Pizza Margherita",
+                "description": "Classic pizza with tomatoes, mozzarella, and basil",
+                "price": 8.00,
+                "image": "margherita.jpg"
+            },
+            {
+                "name": "Pizza Marinara",
+                "description": "Traditional recipe with garlic, oregano, and tomatoes",
+                "price": 7.00,
+                "image": "marinara.jpg"
+            },
+            {
+                "name": "Pizza Napoletana",
+                "description": "Tomatoes, mozzarella, anchovies, and capers",
+                "price": 9.00,
+                "image": "napoletana.jpg"
+            },
+            {
+                "name": "Carbonara",
+                "description": "Creamy pasta with pancetta",
+                "price": 10.00,
+                "image": "carbonara.jpg"
+            },
+            {
+                "name": "Bucatini all'Amatriciana",
+                "description": "Traditional pasta with guanciale and tomato sauce",
+                "price": 10.00,
+                "image": "amatriciana.jpg"
+            },
+            {
+                "name": "Aglio E Olio",
+                "description": "Classic pasta with garlic and olive oil",
+                "price": 8.50,
+                "image": "aglioeolio.jpg"
+            }
+        ]
+    }
+]

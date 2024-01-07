@@ -1,9 +1,7 @@
-import data from 'Data/menu.json';
-
-export default function getMenu() {
+export default function renderMenu(menu) {
     const viewName = 'Menu';
 
-    const container = document.createElement('section')
+    const container = document.createElement('section');
 
     const sectionHeader = document.createElement('h2');
     sectionHeader.classList.add('center');
@@ -12,15 +10,18 @@ export default function getMenu() {
     const menuGrid = document.createElement('div');
     menuGrid.classList.add('menu-grid');
 
-    data.forEach((item) => {
+    menu.forEach((item) => {
         const { name, description, price, image } = item;
 
         const menuItem = document.createElement('div');
         menuItem.classList.add('menu-item');
 
         // Create the image item in the menu card
+        const imgContainer = document.createElement('div');
+        imgContainer.classList.add('menu-img');
         const img = new Image();
-        img.src = require(`./${image}`);
+        img.src = require(`Images/${image}`);
+        imgContainer.appendChild(img)
 
         // Create the div to be the right of the menu item card
         const itemContent = document.createElement('div');
@@ -32,7 +33,7 @@ export default function getMenu() {
         <p>$ <span>${price.toFixed(2)}</span></p>
         `;
 
-        menuItem.appendChild(img);
+        menuItem.appendChild(imgContainer);
         menuItem.appendChild(itemContent);
 
         menuGrid.appendChild(menuItem);

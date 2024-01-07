@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Asiatic",
+        "description": "Pan asian fine dining",
+        "phone": "+61 2 9888 8888",
+        "location": "Level 17",
+        "hours": "Daily 11.30am until late",
+        "notes": "Reservations are required"
+    },
+    {
+        "name": "Burgari",
+        "description": "American style burger joint",
+        "phone": "+61 2 9888 8889",
+        "location": "Poolside Dining",
+        "hours": "Daily 10am to 10pm",
+        "notes": "No reservations needed"
+    },
+    {
+        "name": "Mesino",
+        "description": "Traditional Napolitan pizza and Italian pastas",
+        "phone": "+61 2 9888 8890",
+        "location": "Atrium",
+        "hours": "Daily 12pm to 11pm",
+        "notes": "Reservations recommended for groups larger than 6"
+    }
+]

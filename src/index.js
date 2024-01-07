@@ -1,33 +1,31 @@
 import './style.css';
-import getMenu from 'Components/menu/menuPage';
-import getHome from './components/home/homePage';
 
-const homeView = getHome();
-const menuView = getMenu();
+// DATA IMPORTS
+import venues from 'Data/venues.json';
+import menues from 'Data/menues.json';
 
-let isHome = true;
+// COMPONENT IMPORTS
+import heroSection from 'Components/renderHero';
+import menuSection from 'Components/renderMenu';
+
+// ---
+
+const currVenue = 0;
+
+const venueView = heroSection(venues[currVenue]);
+const menuView = menuSection(menues[currVenue].menu);
 
 // where we selectively render content
 const content = document.getElementById('content');
-content.appendChild(isHome ? homeView : menuView);
 
-// Function to remove current content... content, and replace with new.. content
-function replaceContent() {
-    while (content.firstChild) {
-        content.removeChild(content.firstChild);
+content.appendChild(venueView);
+content.appendChild(menuView);
+
+// Function to replace content takes the dom element to empty and a new child to append
+function replaceContent(parentNode, newView) {
+    while (parentNode.firstChild) {
+        parentNode.removeChild(parentNode.firstChild);
     }
 
-    isHome = !isHome;
-
-    content.appendChild(isHome ? homeView : menuView);
+    parentNode.appendChild(newView);
 }
-
-// Create a button to switch between menu and home
-const toggleButton = document.createElement('button');
-toggleButton.textContent = 'Toggle Home and Welcome Page';
-
-toggleButton.addEventListener('click', replaceContent);
-
-const body = document.body;
-
-body.insertBefore(toggleButton, content);
