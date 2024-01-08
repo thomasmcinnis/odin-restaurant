@@ -1,8 +1,5 @@
-
-
 export default function renderHero(venue) {
-    const { name, description, phone, location, hours, notes } = venue;
-
+    const { name, description } = venue;
     const imageName = name.toLowerCase();
 
     const heroSection = document.createElement('section');
@@ -10,10 +7,14 @@ export default function renderHero(venue) {
 
     const heading = document.createElement('h1');
     heading.textContent = name;
-    heading.classList.add('hero-heading')
+    heading.classList.add('hero-heading');
+
+    const subheading = document.createElement('p');
+    subheading.textContent = description;
+    subheading.classList.add('hero-subheading');
 
     const imgContainer = document.createElement('div');
-    imgContainer.classList.add('hero-img')
+    imgContainer.classList.add('hero-img');
 
     const img = new Image();
     img.src = require(`Images/${imageName}-hero.jpg`);
@@ -22,6 +23,7 @@ export default function renderHero(venue) {
 
     heroSection.appendChild(heading);
     heroSection.appendChild(imgContainer);
+    heroSection.appendChild(subheading);
 
     return heroSection;
 }

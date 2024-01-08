@@ -5,27 +5,56 @@ import venues from 'Data/venues.json';
 import menues from 'Data/menues.json';
 
 // COMPONENT IMPORTS
-import heroSection from 'Components/renderHero';
-import menuSection from 'Components/renderMenu';
+import getHero from 'Components/renderHero';
+import getMenu from 'Components/renderMenu';
+import getDetails from 'Components/renderDetails';
 
-// ---
+//------------------
 
-const currVenue = 0;
+let currVenue = 0;
 
-const venueView = heroSection(venues[currVenue]);
-const menuView = menuSection(menues[currVenue].menu);
-
-// where we selectively render content
-const content = document.getElementById('content');
-
-content.appendChild(venueView);
-content.appendChild(menuView);
-
-// Function to replace content takes the dom element to empty and a new child to append
-function replaceContent(parentNode, newView) {
-    while (parentNode.firstChild) {
-        parentNode.removeChild(parentNode.firstChild);
+(function createMenu() {
+    const nav = document.getElementById('venue-nav');
+    
+    const list = document.createElement('ul');
+    
+    const handleMenuClick = (event) => {
+        const item = event.target;
+        if (!item.id) return;
+    
+        const index = item.id;
+        currVenue = index;
+        updateContent(index);
     }
 
-    parentNode.appendChild(newView);
+    venues.forEach((item, index) => {
+    const { name } = item;
+        const listItem = document.createElement('li');
+        listItem.setAttribute('id', index);
+        listItem.textContent = name;
+
+        listItem.addEventListener('click', handleMenuClick);
+
+        list.appendChild(listItem);
+    });
+
+    nav.appendChild(list);
+})();
+
+function updateContent(index) {
+    const content = document.getElementById('content');
+
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
+
+    const heroView = getHero(venues[index]);
+    const menuView = getMenu(menues[index].menu);
+    const detailsView = getDetails(venues[index]);
+
+    content.appendChild(heroView);
+    content.appendChild(menuView);
+    // content.appendChild(detailsView);
 }
+
+updateContent(currVenue);

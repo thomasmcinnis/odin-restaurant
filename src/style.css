@@ -51,6 +51,8 @@ h6 {
     isolation: isolate;
 }
 
+/* STYLING */
+
 @font-face {
     font-family: 'Junge';
     src: url('./fonts/Junge-Regular.ttf');
@@ -86,10 +88,12 @@ h2 {
 
 body {
     font-family: 'Outfit';
+    text-transform: lowercase;
     background-color: var(--color-bgnd-dark);
     color: var(--color-txt-white);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .center {
@@ -100,11 +104,50 @@ body {
     color: var(--color-txt-light);
 }
 
-#content {
+#content,
+#main-nav {
     max-width: 70rem;
-    place-self: center;
-    padding: 6rem 0;
+}
+
+#main-nav {
     display: flex;
+    width: 100%;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+.logo { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Junge';
+    font-size: var(--font-lg);
+    margin-right: auto;
+}
+
+#venue-nav {
+    background-color: var(--color-bgnd-mid);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & ul{
+        max-width: 70rem;
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+    }
+
+    & li {
+        padding: 0.25rem 0.5rem;
+        border-bottom: .1rem solid;
+        border-color: white;
+    }
+}
+
+#content {
+    display: flex;
+    padding: 6rem 0;
     flex-direction: column;
     gap: 8rem;
 }
@@ -112,38 +155,49 @@ body {
 #content h2 {
     margin-bottom: 4rem;
     font-size: var(--font-2xl);
-    text-transform: lowercase;
 }
 
 .hero-section {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+    width: 100%;
 }
 
 .hero-heading {
+    grid-column: 2;
+    grid-row: 1;
     font-size: 12rem;
     line-height: normal;
-    text-align: right;
-    text-transform: lowercase;
-    z-index: 10;
-    position: absolute;
-    top: 30%;
-    right: 5%;
+    align-self: end;
 }
 
 .hero-img {
+    grid-column: 2;
+    grid-row: 1/3;
     opacity: 90%;
     width: 26rem;
     aspect-ratio: 3/4;
     background-color: var(--color-bgnd-mid);
     overflow: hidden;
+    z-index: -10;
     margin-left: auto;
-    margin-right: 10%;
+    margin-right: 3rem;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-.hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.hero-subheading {
+    grid-column: 1/3;
+    grid-row: 2;
+    justify-self: end;
+    margin-right: 40%;
+    margin-bottom: 1rem;
 }
 
 .menu-grid {
@@ -158,11 +212,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--color-bgnd-mid);
-    text-transform: lowercase;
-
 }
 
-.menu-img  {
+.menu-img {
     overflow: hidden;
 }
 
