@@ -5,7 +5,8 @@
         "phone": "+61 2 9888 8888",
         "location": "Level 17",
         "hours": "Daily 11.30am until late",
-        "notes": "Reservations are required"
+        "notes": "Reservations required",
+        "about": "Situated on the 17th floor, Asiatic provides panoramic views of the cityscape while guests indulge in a diverse array of sophisticated Pan-Asian cuisine."
     },
     {
         "name": "Burgari",
@@ -13,7 +14,8 @@
         "phone": "+61 2 9888 8889",
         "location": "Poolside Dining",
         "hours": "Daily 10am to 10pm",
-        "notes": "No reservations needed"
+        "notes": "No reservations needed",
+        "about": "Located alongside the hotel's vibrant poolside, Burgari serves up classic American-style burgers and fries, creating the perfect blend of relaxation and flavor."
     },
     {
         "name": "Mesino",
@@ -21,6 +23,7 @@
         "phone": "+61 2 9888 8890",
         "location": "Atrium",
         "hours": "Daily 12pm to 11pm",
-        "notes": "Reservations recommended for groups larger than 6"
+        "notes": "Reservations recommended for groups larger than 6",
+        "about": "Nestled in the heart of the hotel's bright and airy atrium, Mesino offers guests authentic Napolitan pizza and traditional Italian pastas, accentuating a unique dining experience."
     }
 ]

@@ -2,12 +2,12 @@ import './style.css';
 
 // DATA IMPORTS
 import venues from 'Data/venues.json';
-import menues from 'Data/menues.json';
+import menues from 'Data/menus.json';
 
 // COMPONENT IMPORTS
 import getHero from 'Components/renderHero';
 import getMenu from 'Components/renderMenu';
-import getDetails from 'Components/renderDetails';
+import getAbout from 'Components/renderAbout';
 
 //------------------
 
@@ -49,12 +49,12 @@ function updateContent(index) {
     }
 
     const heroView = getHero(venues[index]);
+    const aboutView = getAbout(venues[index]);
     const menuView = getMenu(menues[index].menu);
-    const detailsView = getDetails(venues[index]);
 
     content.appendChild(heroView);
+    content.appendChild(aboutView);
     content.appendChild(menuView);
-    // content.appendChild(detailsView);
 }
 
 updateContent(currVenue);

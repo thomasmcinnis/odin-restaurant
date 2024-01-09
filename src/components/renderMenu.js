@@ -1,11 +1,11 @@
 export default function renderMenu(menu) {
-    const viewName = 'Menu';
+    const VIEW_NAME = 'Menu';
 
     const container = document.createElement('section');
 
     const sectionHeader = document.createElement('h2');
     sectionHeader.classList.add('center');
-    sectionHeader.textContent = viewName;
+    sectionHeader.textContent = VIEW_NAME;
 
     const menuGrid = document.createElement('div');
     menuGrid.classList.add('menu-grid');
