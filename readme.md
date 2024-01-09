@@ -1,3 +1,5 @@
+Live demo: [github pages](https://thomasmcinnis.github.io/odin-restaurant/)
+
 ### About
 
 Completed as part of The Odin Project Javascript [Restaurant Page assignment](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page).
