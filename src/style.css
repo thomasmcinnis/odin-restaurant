@@ -144,10 +144,16 @@ body {
     border-bottom: 0.1rem solid;
     border-color: transparent;
 
-    &:hover {
+    &:hover{
         border-color: white;
         cursor: pointer;
     }
+
+    &.is-current {
+        border-color: white;
+    }
+
+
 }
 
 #content {

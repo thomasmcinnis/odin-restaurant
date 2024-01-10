@@ -13,44 +13,58 @@ import getAbout from 'Components/renderAbout';
 
 let currVenue = 0;
 
-(function createMenu() {
+(function createVenueNav() {
     const nav = document.getElementById('venue-nav');
-    
+
     const list = document.createElement('ul');
-    
+
+    const renderItems = () => {
+        // Remove existing nav items
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
+        // Add nav items for each venue adding "is-current" if active item
+        venues.forEach((item, index) => {
+            const { name } = item;
+            const listItem = document.createElement('li');
+            listItem.setAttribute('id', index);
+            listItem.textContent = name;
+
+            if (index == currVenue) {
+                listItem.classList.add('is-current');
+            }
+
+            list.appendChild(listItem);
+        });
+    };
+
     const handleMenuClick = (event) => {
         const item = event.target;
-        if (!item.id) return;
-    
-        const index = item.id;
-        currVenue = index;
-        updateContent(index);
-    }
+        if (!item.id || item.id == currVenue) return;
 
-    venues.forEach((item, index) => {
-    const { name } = item;
-        const listItem = document.createElement('li');
-        listItem.setAttribute('id', index);
-        listItem.textContent = name;
+        currVenue = item.id;
+        updateContent();
+        renderItems();
+    };
 
-        listItem.addEventListener('click', handleMenuClick);
+    list.addEventListener('click', handleMenuClick);
 
-        list.appendChild(listItem);
-    });
+    renderItems();
 
     nav.appendChild(list);
 })();
 
-function updateContent(index) {
+function updateContent() {
     const content = document.getElementById('content');
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
     }
 
-    const heroView = getHero(venues[index]);
-    const aboutView = getAbout(venues[index]);
-    const menuView = getMenu(menues[index].menu);
+    const heroView = getHero(venues[currVenue]);
+    const aboutView = getAbout(venues[currVenue]);
+    const menuView = getMenu(menues[currVenue].menu);
 
     content.appendChild(heroView);
     content.appendChild(aboutView);
